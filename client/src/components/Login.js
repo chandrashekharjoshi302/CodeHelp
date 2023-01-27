@@ -38,18 +38,18 @@ const Login = () => {
 
   return (
     <div>
-        <form onSubmit={(e)=>handleLogin(e)} style={{margin:"auto",backgroundColor:"#050b4f",border:"1px solid white",width:"40%",padding:"40px"}}>
+        <form onSubmit={(e)=>handleLogin(e)} >
         <label>
                 Email:
             </label>
-            <input style={{width:"100%"}} type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="abc@gmail.com"/>
+            <input  type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="abc@gmail.com"/>
             <br />
             <label>
                 Password:
             </label>
-            <input style={{width:"100%"}} type="password" onChange={(e)=>SetPassword(e.target.value)} placeholder="Password"/>
+            <input type="password" onChange={(e)=>SetPassword(e.target.value)} placeholder="Password"/>
             <br />
-            <input style={{width:"100%",marginTop:"40px"}} type="submit" placeholder='Submit'/>
+            <input type="submit" placeholder='Submit'/>
         </form>
     </div>
   )
