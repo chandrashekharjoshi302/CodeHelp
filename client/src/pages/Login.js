@@ -65,7 +65,6 @@ export default function Login() {
           rounded={"lg"}
           bg={useColorModeValue("white", "gray.700")}
           boxShadow={"lg"}
-          bgImage={"/wave.jpg"}
           p={6}
         >
           <Stack spacing={4}>
