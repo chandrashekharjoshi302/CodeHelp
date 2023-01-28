@@ -21,7 +21,7 @@ function Test({questions}) {
     setCurrentQuestion(currentQuestion+1)
     setIsCorrect(null)
   }
-  console.log(questions)
+//   console.log(questions)
 
   return (
     <div style={{marginTop:"100px"}}>
