@@ -1,0 +1,660 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "London",
+            "Rome",
+            "Madrid"
+        ],
+        "answer": "Paris",
+        "difficulty": "easy",
+        "category": "geography"
+    },
+   
+{
+"question": "Which of the following is a JavaScript library for building user interfaces?",
+"options": [
+"React",
+"Angular",
+"Vue",
+"Ember"
+],
+"answer": "React",
+"difficulty_level":"easy",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to create reusable components in React?",
+"options": [
+"Functions",
+"Classes",
+"Objects",
+"Arrays"
+],
+"answer": "Functions or Classes",
+"difficulty_level":"easy",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to manage the state of a component in React?",
+"options": [
+"state",
+"props",
+"refs",
+"context"
+],
+"answer": "state",
+"difficulty_level":"medium",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to pass data from a parent component to a child component in React?",
+"options": [
+"state",
+"props",
+"refs",
+"context"
+],
+"answer": "props",
+"difficulty_level":"medium",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to handle events in React?",
+"options": [
+"onClick",
+"onSubmit",
+"onChange",
+"onLoad"
+],
+"answer": "onClick, onSubmit, onChange",
+"difficulty_level":"medium",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to conditionally render elements in React?",
+"options": [
+"if-else",
+"switch-case",
+"ternary operator",
+"map function"
+],
+"answer": "if-else, ternary operator",
+"difficulty_level":"hard",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to loop through an array of data and render elements in React?",
+"options": [
+"for loop",
+"while loop",
+"map function",
+"filter function"
+],
+"answer": "map function",
+"difficulty_level":"medium",
+"topic":"React"
+},
+
+
+{
+"question": "Which of the following is used to manage the routing in a React application?",
+"options": [
+"React Router",
+"React Navigator",
+"React Route",
+"React Path"
+],
+"answer": "React Router",
+"difficulty_level":"medium",
+"topic":"React"
+},
+
+{
+"question": "Which of the following is used to change the background color of a web page?",
+"options": [
+"background-color",
+"color",
+"font-color",
+"text-color"
+],
+"answer": "background-color",
+"difficulty_level":"easy",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to change the font of a text in a web page?",
+"options": [
+"font-family",
+"font-size",
+"font-style",
+"font-weight"
+],
+"answer": "font-family",
+"difficulty_level":"easy",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to create a hover effect on a button?",
+"options": [
+"hover",
+"active",
+"focus",
+"visited"
+],
+"answer": "hover",
+"difficulty_level":"medium",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to set a fixed width and height for an element?",
+"options": [
+"width",
+"height",
+"size",
+"dimensions"
+],
+"answer": "width and height",
+"difficulty_level":"medium",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to change the text alignment in a web page?",
+"options": [
+"text-align",
+"align",
+"justify",
+"center"
+],
+"answer": "text-align",
+"difficulty_level":"medium",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to create an animation effect?",
+"options": [
+"animation",
+"transition",
+"transform",
+"keyframes"
+],
+"answer": "animation",
+"difficulty_level":"hard",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to set the position of an element?",
+"options": [
+"position",
+"top",
+"bottom",
+"left"
+],
+"answer": "position",
+"difficulty_level":"medium",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to create a shadow effect?",
+"options": [
+"shadow",
+"box-shadow",
+"text-shadow",
+"drop-shadow"
+],
+"answer": "box-shadow",
+"difficulty_level":"medium",
+"topic":"CSS"
+},
+
+
+{
+"question": "Which of the following is used to create a hyperlink in an HTML document?",
+"options": [
+"<link>",
+"<a>",
+"<img>",
+"<div>"
+],
+"answer": "<a>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create headings in an HTML document?",
+"options": [
+"<h1> - <h6>",
+"<p>",
+"<a>",
+"<img>"
+],
+"answer": "<h1> - <h6>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create a list in an HTML document?",
+"options": [
+"<ul>",
+"<ol>",
+"<dl>",
+"<li>"
+],
+"answer": "<ul>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create a table in an HTML document?",
+"options": [
+"<table>",
+"<tr>",
+"<th>",
+"<td>"
+],
+"answer": "<table>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create a form in an HTML document?",
+"options": [
+"<form>",
+"<input>",
+"<select>",
+"<textarea>"
+],
+"answer": "<form>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create an image in an HTML document?",
+"options": [
+"<img>",
+"<a>",
+"<p>",
+"<div>"
+],
+"answer": "<img>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+{
+"question": "Which of the following is used to create a hyperlink in an HTML document?",
+"options": [
+"<link>",
+"<a>",
+"<img>",
+"<div>"
+],
+"answer": "<a>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create headings in an HTML document?",
+"options": [
+"<h1> - <h6>",
+"<p>",
+"<a>",
+"<img>"
+],
+"answer": "<h1> - <h6>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create a list in an HTML document?",
+"options": [
+"<ul>",
+"<ol>",
+"<dl>",
+"<li>"
+],
+"answer": "<ul>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+{
+"question": "Which of the following is used to create a table in an HTML document?",
+"options": [
+"<table>",
+"<tr>",
+"<th>",
+"<td>"
+],
+"answer": "<table>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create a form in an HTML document?",
+"options": [
+"<form>",
+"<input>",
+"<select>",
+"<textarea>"
+],
+"answer": "<form>",
+"difficulty_level":"medium",
+"topic":"HTML"
+},
+
+
+{
+"question": "Which of the following is used to create an image in an HTML document?",
+"options": [
+"<img>",
+"<a>",
+"<p>",
+"<div>"
+],
+"answer": "<img>",
+"difficulty_level":"easy",
+"topic":"HTML"
+},
+
+{
+"question": "In JavaScript, which of the following is the correct syntax for defining a function?",
+"options": [
+"function myFunc() {}",
+"var myFunc = function() {}",
+"myFunc() {}",
+"function = myFunc() {}"
+],
+"answer": "function myFunc() {}",
+"difficulty_level":"easy",
+"topic":"JavaScript"
+},
+
+
+{
+"question": "In Java, which of the following is the correct syntax for creating a constructor?",
+"options": [
+"constructor MyClass() {}",
+"MyClass() {}",
+"class MyClass() {}",
+"public MyClass() {}"
+],
+"answer": "MyClass() {}",
+"difficulty_level":"easy",
+"topic":"Java"
+},
+
+
+{
+"question": "In C#, which of the following is the correct syntax for creating an interface?",
+"options": [
+"interface MyInterface {}",
+"class MyInterface {}",
+"struct MyInterface {}",
+"protocol MyInterface {}"
+],
+"answer": "interface MyInterface {}",
+"difficulty_level":"easy",
+"topic":"C#"
+},
+
+{
+"question": "In Python, which of the following is the correct syntax for creating a tuple?",
+"options": [
+"tuple myTuple = (1, 2, 3)",
+"myTuple = [1, 2, 3]",
+"myTuple = {1, 2, 3}",
+"var myTuple = (1, 2, 3)"
+],
+"answer": "tuple myTuple = (1, 2, 3)",
+"difficulty_level":"easy",
+"topic":"Python"
+},
+
+
+{
+"question": "In C++, which of the following is the correct syntax for creating a pointer variable?",
+"options": [
+"int* x",
+"int x",
+"int x",
+"x"
+],
+"answer": "int x",
+"difficulty_level":"easy",
+"topic":"C++"
+},
+
+
+{
+"question": "In JavaScript, which of the following is the correct syntax for creating a class?",
+"options": [
+"class MyClass {}",
+"function MyClass() {}",
+"var MyClass = {}",
+"object MyClass {}"
+],
+"answer": "class MyClass {}",
+"difficulty_level":"easy",
+"topic":"JavaScript"
+},
+
+{
+"question": "In JavaScript, which of the following is the correct syntax for defining a function?",
+"options": [
+"function myFunc() {}",
+"var myFunc = function() {}",
+"myFunc() {}",
+"function = myFunc() {}"
+],
+"answer": "function myFunc() {}",
+"difficulty_level":"easy",
+"topic":"JavaScript"
+},
+
+
+{
+"question": "In Java, which of the following is the correct syntax for creating a constructor?",
+"options": [
+"constructor MyClass() {}",
+"MyClass() {}",
+"class MyClass() {}",
+"public MyClass() {}"
+],
+"answer": "MyClass() {}",
+"difficulty_level":"easy",
+"topic":"Java"
+},
+
+
+{
+"question": "In C#, which of the following is the correct syntax for creating an interface?",
+"options": [
+"interface MyInterface {}",
+"class MyInterface {}",
+"struct MyInterface {}",
+"protocol MyInterface {}"
+],
+"answer": "interface MyInterface {}",
+"difficulty_level":"easy",
+"topic":"C#"
+},
+
+{
+"question": "In Python, which of the following is the correct syntax for creating a tuple?",
+"options": [
+"tuple myTuple = (1, 2, 3)",
+"myTuple = [1, 2, 3]",
+"myTuple = {1, 2, 3}",
+"var myTuple = (1, 2, 3)"
+],
+"answer": "tuple myTuple = (1, 2, 3)",
+"difficulty_level":"easy",
+"topic":"Python"
+},
+
+
+{
+"question": "In C++, which of the following is the correct syntax for creating a pointer variable?",
+"options": [
+"int* x",
+"int x",
+"int x",
+"x"
+],
+"answer": "int x",
+"difficulty_level":"easy",
+"topic":"C++"
+},
+
+
+{
+"question": "In JavaScript, which of the following is the correct syntax for creating a class?",
+"options": [
+"class MyClass {}",
+"function MyClass() {}",
+"var MyClass = {}",
+"object MyClass {}"
+],
+"answer": "class MyClass {}",
+"difficulty_level":"easy",
+"topic":"JavaScript"
+},
+
+{
+"question": "What is the default file extension for a Next.js page?",
+"options": [
+".js",
+".jsx",
+".html",
+".njx"
+],
+"answer": ".js",
+"difficulty_level":"easy",
+"topic":"Next.js"
+},
+{
+"question": "Which of the following is not a lifecycle method of a Next.js component?",
+"options": [
+"getInitialProps",
+"getServerProps",
+"getStaticProps",
+"getInitialState"
+],
+"answer": "getInitialState",
+"difficulty_level":"medium",
+"topic":"Next.js"
+},
+{
+"question": "What is the use of the getStaticProps method in Next.js?",
+"options": [
+"To fetch data at build time",
+"To fetch data at runtime",
+"To set the initial state of the component",
+"To handle events"
+],
+"answer": "To fetch data at build time",
+"difficulty_level":"medium",
+"topic":"Next.js"
+},
+{
+"question": "What is the use of the getServerProps method in Next.js?",
+"options": [
+"To fetch data at build time",
+"To fetch data at runtime",
+"To set the initial state of the component",
+"To handle events"
+],
+"answer": "To fetch data at runtime",
+"difficulty_level":"medium",
+"topic":"Next.js"
+},
+{
+"question": "Which of the following is not a way to export a component in Next.js?",
+"options": [
+"export default",
+"export const",
+"export let",
+"export function"
+],
+"answer": "export let",
+"difficulty_level":"medium",
+"topic":"Next.js"
+},
+
+
+{
+"question": "What is the use of the Link component in Next.js?",
+"options": [
+"To create a link to an external website",
+"To navigate between pages in the application",
+"To handle events",
+"To fetch data"
+],
+"answer": "To navigate between pages in the application",
+"difficulty_level":"easy",
+"topic":"Next.js"
+},
+
+
+{
+"question": "What is the use of the Router component in Next.js?",
+"options": [
+"To create a link to an external website",
+"To navigate between pages in the application",
+"To handle routing in the application",
+"To fetch data"
+],
+"answer": "To handle routing in the application",
+"difficulty_level":"medium",
+"topic":"Next.js"
+}
+
+
+
+
+
+]
