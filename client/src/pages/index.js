@@ -14,9 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main >
-        <div className='text-red-500'>hey folks!</div>
-      </main>
+      <div className='border-4 border-green-600 '>
+        <div className='text-red-500 border-4 border-green-600 mt-[57px]'>hey folks!</div>
+      </div>
     </>
   )
 }

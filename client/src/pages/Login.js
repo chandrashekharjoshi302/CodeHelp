@@ -37,20 +37,22 @@ const Login = () => {
     // }
 
   return (
-    <div>
+    <div className=''>
+        <div className='mt-[62px]'>
         <form onSubmit={(e)=>handleLogin(e)} >
         <label>
                 Email:
             </label>
-            <input  type="email" onChange={(e)=>setEmail(e.target.value)} placeholder="abc@gmail.com"/>
+            <input  type="email" placeholder="abc@gmail.com"/>
             <br />
             <label>
                 Password:
             </label>
-            <input type="password" onChange={(e)=>SetPassword(e.target.value)} placeholder="Password"/>
+            <input type="password"  placeholder="Password"/>
             <br />
             <input type="submit" placeholder='Submit'/>
         </form>
+        </div>
     </div>
   )
 }

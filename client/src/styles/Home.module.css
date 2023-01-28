@@ -1,23 +1,12 @@
 
-.main{
+/* .main{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-}
+} */
 
-.menu span{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  border-radius: 6px;
-  transition: 0.4s;
-  transform-origin: 0 0;
-  z-index: 1;
-  background: white;
-}
-#main{
+
+#mai{
   background: rgb(247,7,7);
 background: linear-gradient(93deg, rgba(247,7,7,0.9248949579831933) 0%, rgba(0,0,0,1) 0%, rgba(7,33,99,1) 0%, rgba(0,3,11,1) 0%, rgba(3,18,51,1) 76%, rgba(3,19,52,1) 76%, rgba(9,39,121,1) 99%, rgba(8,81,203,1) 100%);
 }
