@@ -12,6 +12,8 @@ import {
   MenuOptionGroup,
   MenuDivider,
   IconButton,
+  Button,
+  Text,
 } from "@chakra-ui/react";
 import {
   AddIcon,
@@ -21,8 +23,21 @@ import {
   RepeatIcon,
 } from "@chakra-ui/icons";
 import Link from "next/link";
+import useAuth from "../useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase-config";
 
 const Navbar = () => {
+  const currentUser = useAuth();
+
+  const Logout = async () => {
+    try {
+      await signOut(auth);
+      alert("Logout Successful");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div style={{marginTop:"0px"}} className="mt-0 border">
     <div className="flex h-[60px] text-xl items-center px-2 justify-between font-sans font-medium  text-gray-300 w-full fixed mb-10" id={styles.mai}>
@@ -46,11 +61,14 @@ const Navbar = () => {
         </Link>
         <h1 className="cursor-pointer hover:scale-110 duration-200">About Us</h1>
         <Link href="/login">
-        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md ">Signin</h1>
+        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md ">{currentUser?currentUser.displayName:"Signin"}</h1>
         </Link>
         <Link href="/signup">
-        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md">Register</h1>
+        <Text className="cursor-pointer">
+            {currentUser?"":"Register"}
+        </Text>
         </Link>
+        <Text style={{cursor:"pointer"}} onClick={Logout}>{currentUser?"Logout":""}</Text>
       </div>
       </div>
 
@@ -73,14 +91,17 @@ const Navbar = () => {
             </MenuItem>
             <Link href="/login">
             <MenuItem >
-              Signin
+            {currentUser?currentUser.displayName:"Signin"}
             </MenuItem>
             </Link>
             <Link href="/signup">
             <MenuItem >
-              Register
+            {currentUser?"":"Register"}
             </MenuItem>
             </Link>
+            <MenuItem>
+            <Text style={{cursor:"pointer"}} onClick={Logout}>{currentUser?"Logout":""}</Text>
+            </MenuItem>
           </MenuList>
         </Menu>
       </div>
