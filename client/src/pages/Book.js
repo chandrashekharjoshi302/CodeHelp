@@ -3,10 +3,26 @@ import React from "react";
 function Book(){
     return (
         <div style={{marginTop:"100px"}}>
-          <a href ="plz give your goole drive pdf link here" target = "_blank">Coding Book</a>
-          {/* example */}
-          <a href ="https://drive.google.com/file/d/1TBJHhIe8cjRc9gHwYkMwsfUTlbcWsz0I/view?usp=share_link" target = "_blank">DSA Book</a>
-          <a href ="" target = "_blank">Interview Book</a>
+          <div>
+          Switch Case
+          <a href ="/Switch.pdf" target = "_blank">Preview</a>
+          <a href ="/Switch.pdf" download>Download</a>
+          </div>
+          <div>
+          Pattern Making
+          <a href ="/Pattern.pdf" target = "_blank">Preview</a>
+          <a href ="/Pattern.pdf" download>Download</a>
+          </div>
+          <div>
+          Sorting
+          <a href ="/Sorting.pdf" target = "_blank">Preview</a>
+          <a href ="/Sorting.pdf" download>Download</a>
+          </div>
+          <div>
+          Overview
+          <a href ="/Notes.pdf" target = "_blank">Preview</a>
+          <a href ="/Notes.pdf" download>Download</a>
+          </div>
          
         </div>
     );
