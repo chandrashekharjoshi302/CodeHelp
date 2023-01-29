@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import Link from 'next/link'
+import quiz from '../../public/quiz.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,8 +16,35 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='border-4 border-green-600 '>
-        <div className='text-red-500 border-4 border-green-600 mt-[57px]'>hey folks!</div>
+      <div className=' mt-[57px] relative -z-10' id={styles.home}>
+        <div className= ''>
+          <div className='w-[70%]  md:w-[40%] space-y-2 hover:rounded-lg h-40 bg-white backdrop:blur-xl p-3 border-l-4 border-blue-900 absolute top-40 md:top-[350px] lg:top-40 left-[20%] md:left-[46%]'>
+            <h1 className='text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-400'>Welcome to QuizzyBook</h1>
+            <h1 className='text-sm md:text-[16px] text-gray-800 font-semibold text-center'>"Think before you speak. Read before you think." <br/>  – Fran Lebowitz</h1>
+            {/* <h1 className='text-sm text-gray-800 font-semibold'>learn and can Quiz yourself</h1> */}
+          </div>
+        </div>
+        <div className='flex px-2'>
+          <div className=' absolute top-[42%] md:top-[48%] md:left-[30%] w-[200px] h-[200px] text-black'>
+             <div className='h-[70%]  overflow-hidden'>
+               <img src='/book.jpg' width="200" height="90" className='hover:scale-125 duration-300' alt="books" /> 
+             </div>
+             <div className='bg-white h-[30%] text-center'>
+             <p className='font-semibold text-lg text-gray-600'>Go to Book Store</p>
+             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300' id={styles.btn}>OPEN</button>
+             </div>
+          </div>
+
+          <div className=' absolute top-[67%] md:top-[48%] left-[46%] md:left-[60%] lg:left-[50%] w-[200px] h-[200px] shadow-lg'>
+          <div className='h-[70%]  overflow-hidden'>
+               <img src='/quiz.jpg' width="200" height="90" className='hover:scale-110 duration-300' alt="books" /> 
+             </div>
+             <div className='bg-white h-[30%] text-center'>
+             <p className='font-semibold text-lg text-gray-600'>Go to Quiz Section</p>
+             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300 ' id={styles.btn}>OPEN</button>
+             </div>
+          </div>
+        </div>
       </div>
     </>
   )
