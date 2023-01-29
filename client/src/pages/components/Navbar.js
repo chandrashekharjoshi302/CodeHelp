@@ -9,6 +9,7 @@ import {
   MenuItem,
   Text,
   IconButton,
+  useToast,
 } from "@chakra-ui/react";
 import {
   AddIcon,
@@ -26,11 +27,20 @@ import { auth } from "../firebase/firebase-config";
 
 const Navbar = () => {
   const currentUser = useAuth();
+ 
+  const toast=useToast()
 
   const Logout = async () => {
     try {
       await signOut(auth);
-      alert("Logout Successful");
+      toast({
+        status:"success",
+        duration:"3000",
+        isClosable:true,
+        title:"Logout",
+        description:"Successfull.",
+        position:"top"
+      })
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +101,7 @@ const Navbar = () => {
                       currentUser.email.indexOf("@")
                     ) : ""}
             </Text>
-            <Text style={{ cursor: "pointer" }} onClick={Logout} >
+            <Text style={{ cursor: "pointer" }} onClick={()=>Logout()} >
               {currentUser ? "logout" : ""}
             </Text>
           </div>
