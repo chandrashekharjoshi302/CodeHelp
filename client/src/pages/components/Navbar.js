@@ -2,7 +2,7 @@ import React from "react";
 import { BsSearch } from "react-icons/bs";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
-import {RiLogoutCircleRLine} from 'react-icons/ri'
+import { RiLogoutCircleRLine } from "react-icons/ri";
 import {
   Menu,
   MenuButton,
@@ -24,24 +24,24 @@ import { GoHome, GoInfo } from "react-icons/go";
 
 import useAuth from "../useAuth";
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase/firebase-config";
+import { auth } from "../../firebase/firebase-config";
 
 const Navbar = () => {
   const currentUser = useAuth();
- 
-  const toast=useToast()
+
+  const toast = useToast();
 
   const Logout = async () => {
     try {
       await signOut(auth);
       toast({
-        status:"success",
-        duration:"3000",
-        isClosable:true,
-        title:"Logout",
-        description:"Successfull.",
-        position:"top"
-      })
+        status: "success",
+        duration: "3000",
+        isClosable: true,
+        title: "Logout",
+        description: "Successfull.",
+        position: "top",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -86,26 +86,29 @@ const Navbar = () => {
               <GoInfo />
             </h1>
             <Link href="/Login">
-             {currentUser?"": <h1
-                className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md"
-                id={styles.btn}
-              >
-                Signin
-              </h1>}
+              {currentUser ? (
+                ""
+              ) : (
+                <h1
+                  className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md"
+                  id={styles.btn}
+                >
+                  Signin
+                </h1>
+              )}
             </Link>
             {/* <Link href="/signup">
         <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md">Register</h1>
         </Link> */}
             <Text style={{ cursor: "pointer" }}>
-              {currentUser ? currentUser.email.substring(
-                      0,
-                      currentUser.email.indexOf("@")
-                    ) : ""}
+              {currentUser
+                ? currentUser.email.substring(0, currentUser.email.indexOf("@"))
+                : ""}
             </Text>
-            <Link href="/" >
-            <Text style={{ cursor: "pointer" }} onClick={()=>Logout()} >
-              {currentUser ? <RiLogoutCircleRLine size={24}/> : ""}
-            </Text>
+            <Link href="/">
+              <Text style={{ cursor: "pointer" }} onClick={() => Logout()}>
+                {currentUser ? <RiLogoutCircleRLine size={24} /> : ""}
+              </Text>
             </Link>
           </div>
         </div>
@@ -125,10 +128,16 @@ const Navbar = () => {
               <MenuItem>About</MenuItem>
               <Link href="/Login">
                 <MenuItem className="flex gap-2">
-                  {currentUser ? currentUser.email.substring(
-                      0,
-                      currentUser.email.indexOf("@")
-                    ): "Signin"} <span onClick={Logout}> {currentUser ? <RiLogoutCircleRLine size={24}/> : ""}</span>
+                  {currentUser
+                    ? currentUser.email.substring(
+                        0,
+                        currentUser.email.indexOf("@")
+                      )
+                    : "Signin"}{" "}
+                  <span onClick={Logout}>
+                    {" "}
+                    {currentUser ? <RiLogoutCircleRLine size={24} /> : ""}
+                  </span>
                 </MenuItem>
               </Link>
               {/* <MenuItem onClick={Logout}>

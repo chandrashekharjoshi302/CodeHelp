@@ -22,7 +22,7 @@ export default function Home() {
         <div className= ''>
           <div className='w-[70%]  md:w-[40%] space-y-2 hover:rounded-lg h-40 bg-white backdrop:blur-xl p-3 border-l-4 border-blue-900 absolute top-40 md:top-[350px] lg:top-40 left-[20%] md:left-[46%]'>
             <h1 className='text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-400'>Welcome to QuizzyBook</h1>
-            <h1 className='text-sm md:text-[16px] text-gray-800 font-semibold text-center'>"Think before you speak. Read before you think." <br/>  – Fran Lebowitz</h1>
+            <h1 className='text-sm md:text-[16px] text-gray-800 font-semibold text-center'> &quot;Think before you speak. Read before you think.&quot;  <br/>  – Fran Lebowitz</h1>
             {/* <h1 className='text-sm text-gray-800 font-semibold'>learn and can Quiz yourself</h1> */}
           </div>
         </div>

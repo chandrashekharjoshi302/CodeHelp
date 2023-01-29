@@ -14,7 +14,7 @@ import { signOut, signInWithEmailAndPassword } from "firebase/auth";
 import Image from "next/image";
 import { useState } from "react";
 import styles from '@/styles/Home.module.css'
-import { auth, provider } from "./firebase/firebase-config";
+import { auth, provider } from "../firebase/firebase-config";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 
@@ -126,7 +126,7 @@ export default function Login() {
               <Button onClick={Login} colorScheme="messenger" className="w-full ">Login</Button>
             
           </Stack>
-          <h1 className="mt-3 text-center font-semibold">If don't have Account with us <Link href="/signup"> <span className="text-pink-600">Click Here</span></Link> </h1>
+          <h1 className="mt-3 text-center font-semibold">If don&apos;t have Account with us <Link href="/signup"> <span className="text-pink-600">Click Here</span></Link> </h1>
         </Box>
       </Stack>
     </Flex>
