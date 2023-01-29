@@ -12,6 +12,8 @@ import {
   MenuOptionGroup,
   MenuDivider,
   IconButton,
+  Button,
+  Text,
 } from "@chakra-ui/react";
 import {
   AddIcon,
@@ -23,8 +25,22 @@ import {
 import Link from "next/link";
 import {GoHome,GoInfo} from 'react-icons/go'
 
+import useAuth from "../useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase-config";
+
 
 const Navbar = () => {
+  const currentUser = useAuth();
+
+  const Logout = async () => {
+    try {
+      await signOut(auth);
+      alert("Logout Successful");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div  className=" fixed w-full z-20 -mt-[60px] " id={styles.nav}>
     <div className="flex h-[60px] text-xl items-center px-2 justify-between font-sans font-medium  text-gray-300 w-full  " id={styles.mai}>
@@ -79,7 +95,7 @@ const Navbar = () => {
             </MenuItem>
             <Link href="/login">
             <MenuItem >
-              Signin
+            {currentUser?currentUser.displayName:"Signin"}
             </MenuItem>
             </Link>
           </MenuList>
