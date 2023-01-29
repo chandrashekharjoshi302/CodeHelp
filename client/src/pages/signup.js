@@ -62,16 +62,19 @@ import {
         align={"center"}
         justify={"center"}
         bg={useColorModeValue("gray.50", "gray.800")}
-        mt={"11%"}
+        mt="60px"
       >
         <Stack spacing={8} mx={"auto"} w={500} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
-            <Image
+            {/* <Image
               src={"/Circle Flower Natural Brand Logo (1).png"}
               alt="Logo"
               width={150}
               height={150}
-            />
+              displayName
+
+            /> */}
+
             <Heading fontSize={"4xl"} textAlign={"center"}>
               Sign up
             </Heading>
@@ -105,8 +108,8 @@ import {
                   onChange={(e) => setPasswordSignUp(e.target.value)}
                 />
               </Box>
-              <Link href="/login">
-                <Button onClick={Signup}>Sign Up</Button>
+              <Link href="/Login">
+                <Button onClick={Signup} className="w-full">Sign Up</Button>
               </Link>
               <Link href="/">
                 <Button

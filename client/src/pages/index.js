@@ -4,10 +4,12 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 import quiz from '../../public/quiz.jpg'
+import useAuth from './useAuth'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const currentUser = useAuth();
   return (
     <>
       <Head>
@@ -41,7 +43,11 @@ export default function Home() {
              </div>
              <div className='bg-white h-[30%] text-center'>
              <p className='font-semibold text-lg text-gray-600'>Go to Quiz Section</p>
+             {currentUser?<Link href="/test">
              <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300 ' id={styles.btn}>OPEN</button>
+             </Link>:<Link href="/Login">
+             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300 ' id={styles.btn}>OPEN</button>
+             </Link>}
              </div>
           </div>
         </div>

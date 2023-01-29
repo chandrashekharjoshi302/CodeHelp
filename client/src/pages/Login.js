@@ -53,7 +53,8 @@ export default function Login() {
       align={"center"}
       justify={"center"}
       bg={useColorModeValue("gray.50", "gray.800")}
-      mt={"11%"}
+      // mt={"11%"}
+      mt="60px"
     >
       <Stack spacing={8} mx={"auto"} w={500} maxW={"lg"} py={12} px={6}>
         <Stack align={"center"}>
@@ -66,6 +67,7 @@ export default function Login() {
           bg={useColorModeValue("white", "gray.700")}
           boxShadow={"lg"}
           p={6}
+          className="border-2"
         >
           <Stack spacing={4}>
             <Box>
@@ -90,14 +92,15 @@ export default function Login() {
               />
             </Box>
             <Link href="/">
-              <Button onClick={Login}>Login</Button>
+              <Button onClick={Login} className="w-full">Login</Button>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <Button my="2" onClick={Logout}>
                 Logout
               </Button>
-            </Link>
+            </Link> */}
           </Stack>
+          <h1 className="mt-3 text-center font-semibold">If don't have Account with us <Link href="/signup"> <span className="text-cyan-700">Click Here</span></Link> </h1>
         </Box>
       </Stack>
     </Flex>
