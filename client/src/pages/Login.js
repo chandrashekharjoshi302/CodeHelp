@@ -8,6 +8,7 @@ import {
   Text,
   useColorModeValue,
   FormLabel,
+  useToast,
 } from "@chakra-ui/react";
 import { signOut, signInWithEmailAndPassword } from "firebase/auth";
 import Image from "next/image";
@@ -15,8 +16,11 @@ import { useState } from "react";
 import styles from '@/styles/Home.module.css'
 import { auth, provider } from "./firebase/firebase-config";
 import Link from "next/link";
+import { useRouter } from 'next/router'
 
 export default function Login() {
+  const router = useRouter()
+  const toast=useToast()
   const [emailSignIn, setEmailSignIn] = useState("");
   const [passwordSignIn, setPasswordSignIn] = useState("");
 
@@ -34,8 +38,26 @@ export default function Login() {
 
       setEmailSignIn("");
       setPasswordSignIn("");
+
+      toast({
+        status:"success",
+        duration:"3000",
+        isClosable:true,
+        title:"Login",
+        description:"Login Successfull.",
+        position:"top-right"
+      })
+      router.push('/')
+      
     } catch (error) {
-      alert("Wrong Credentials");
+      toast({
+        status:"error",
+        duration:"3000",
+        isClosable:true,
+        title:"Login",
+        description:"Wrong Crediantial!",
+        position:"top-right"
+      })
       console.log(error);
     }
   };
@@ -46,6 +68,7 @@ export default function Login() {
     } catch (error) {
       console.log(error);
     }
+    router.push('/')
   };
 
   return (
@@ -99,14 +122,9 @@ export default function Login() {
                 onChange={(e) => setPasswordSignIn(e.target.value)}
               />
             </Box>
-            <Link href="/">
+            
               <Button onClick={Login} colorScheme="messenger" className="w-full ">Login</Button>
-            </Link>
-            {/* <Link href="/">
-              <Button my="2" onClick={Logout}>
-                Logout
-              </Button>
-            </Link> */}
+            
           </Stack>
           <h1 className="mt-3 text-center font-semibold">If don't have Account with us <Link href="/signup"> <span className="text-pink-600">Click Here</span></Link> </h1>
         </Box>

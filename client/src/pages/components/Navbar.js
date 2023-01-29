@@ -2,6 +2,7 @@ import React from "react";
 import { BsSearch } from "react-icons/bs";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
+import {RiLogoutCircleRLine} from 'react-icons/ri'
 import {
   Menu,
   MenuButton,
@@ -101,9 +102,11 @@ const Navbar = () => {
                       currentUser.email.indexOf("@")
                     ) : ""}
             </Text>
+            <Link href="/" >
             <Text style={{ cursor: "pointer" }} onClick={()=>Logout()} >
-              {currentUser ? "logout" : ""}
+              {currentUser ? <RiLogoutCircleRLine size={24}/> : ""}
             </Text>
+            </Link>
           </div>
         </div>
 
@@ -120,17 +123,17 @@ const Navbar = () => {
                 <MenuItem>Home</MenuItem>
               </Link>
               <MenuItem>About</MenuItem>
-              <Link href="/login">
-                <MenuItem>
+              <Link href="/Login">
+                <MenuItem className="flex gap-2">
                   {currentUser ? currentUser.email.substring(
                       0,
                       currentUser.email.indexOf("@")
-                    ): "Signin"}
+                    ): "Signin"} <span onClick={Logout}> {currentUser ? <RiLogoutCircleRLine size={24}/> : ""}</span>
                 </MenuItem>
               </Link>
-              <MenuItem onClick={Logout}>
+              {/* <MenuItem onClick={Logout}>
               {currentUser ? "logout" : ""}
-                </MenuItem>
+                </MenuItem> */}
             </MenuList>
           </Menu>
         </div>

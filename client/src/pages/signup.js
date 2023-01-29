@@ -8,6 +8,7 @@ import {
     Text,
     useColorModeValue,
     FormLabel,
+    useToast,
   } from "@chakra-ui/react";
   import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
   import styles from '@/styles/Home.module.css'
@@ -17,12 +18,16 @@ import {
   import { auth, db, provider } from "./firebase/firebase-config";
   import Link from "next/link";
   import {FcGoogle} from "react-icons/fc"
+import { useRouter } from "next/router";
   
   export default function Signup() {
+    const router = useRouter()
+    const toast=useToast()
     const [emailSignUp, setEmailSignUp] = useState("");
     const [passwordSignUp, setPasswordSignUp] = useState("");
   
     const Signup = async () => {
+
       try {
         const email = emailSignUp;
         const password = passwordSignUp;
@@ -39,8 +44,27 @@ import {
   
         setEmailSignUp("");
         setPasswordSignUp("");
+        toast({
+          status:"success",
+          duration:"3000",
+          isClosable:true,
+          title:"Signup",
+          description:"Signup Successfull.",
+          position:"top-right"
+        })
+        router.push("/Login")
+        
       } catch (error) {
         console.log(error);
+        toast({
+          status:"error",
+          duration:"3000",
+          isClosable:true,
+          title:"Signup",
+          description:"User already exist !",
+          position:"top-right"
+        })
+
       }
     };
   
@@ -53,6 +77,7 @@ import {
   
         const usersCollectionRef = doc(db, "users", user.uid);
         await setDoc(usersCollectionRef, { email, googleAuth: true });
+        router.push("/")
       } catch (error) {
         console.log(error);
       }
@@ -114,11 +139,11 @@ import {
                   onChange={(e) => setPasswordSignUp(e.target.value)}
                 />
               </Box>
-              <Link href="/Login">
+              
                 <Button onClick={Signup} colorScheme="messenger" className="w-full">Sign Up</Button>
-              </Link>
+            
               <h1 className="text-center mt-2">....OR.....</h1>
-              <Link href="/">
+              {/* <Link href="/"> */}
                 <Button
                   className="w-full"
                   backgroundColor={"white"}
@@ -128,7 +153,7 @@ import {
                 >
                   <FcGoogle size={24}/>
                 </Button>
-              </Link>
+              {/* </Link> */}
             </Stack>
           </Box>
         </Stack>
