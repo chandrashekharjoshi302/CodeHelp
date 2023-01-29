@@ -3,6 +3,8 @@
   padding: 0px;
   box-sizing: border-box;
 } */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 #mai {
   background: rgb(247, 7, 7);
@@ -43,6 +45,74 @@
   background-position: center;
   z-index: 1;
   /* background-color: black; */
+}
+#drop{
+  backdrop-filter: blur(15px);
+  transition: all 0.5s ease-out;
+  background: rgba(250,250,250,0.3);
+}
+
+/* quiz */
+#cont{
+  color: white;
+  background-color: rgba(255, 255, 255, 0.103);
+  backdrop-filter: blur(6px);
+  border-right: 3px solid rgba(255, 255, 255, 0.759);
+  border-left: 1px solid rgba(255, 255, 255, 0.759);
+  border-radius: 6px;
+}
+#maindiv{
+  background-image: url(https://i.pinimg.com/originals/47/08/9e/47089e0e7ca393d5c1556dcaec63e48e.gif);
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-size: contain;
+  background-color: black ;
+
+}
+#btns{
+  background-color: rgba(255, 255, 255, 0.212);
+  backdrop-filter: blur(6px);
+  margin-right: 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.759);
+  border-left: 1px solid rgba(255, 255, 255, 0.759);
+}
+#btns:hover{
+  border-right: 1px solid rgba(0, 0, 0);
+  background-color: rgba(255, 255, 255,0.6);
+  border-left: 1px solid rgba(0, 0, 0);
+  backdrop-filter: blur(16px);
+}
+
+/* books page */
+#hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+  opacity: 0.5;
+}
+#hr-text:before {
+  content: "";
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+#hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 0.5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
 }
 /* #home:hover{
   opacity: 0.8;

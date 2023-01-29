@@ -35,8 +35,6 @@ const Navbar = () => {
       console.log(error);
     }
   };
-  console.log(currentUser);
-  console.log(currentUser?.email.substring(0, currentUser.email.indexOf("@")));
   return (
     <div className=" fixed w-full z-20 -mt-[60px] " id={styles.nav}>
       <div
@@ -93,8 +91,8 @@ const Navbar = () => {
                       currentUser.email.indexOf("@")
                     ) : ""}
             </Text>
-            <Text style={{ cursor: "pointer" }} onClick={Logout}>
-              {currentUser ? "Logout" : ""}
+            <Text style={{ cursor: "pointer" }} onClick={Logout} >
+              {currentUser ? "logout" : ""}
             </Text>
           </div>
         </div>
@@ -114,9 +112,15 @@ const Navbar = () => {
               <MenuItem>About</MenuItem>
               <Link href="/login">
                 <MenuItem>
-                  {currentUser ? currentUser.displayName : "Signin"}
+                  {currentUser ? currentUser.email.substring(
+                      0,
+                      currentUser.email.indexOf("@")
+                    ): "Signin"}
                 </MenuItem>
               </Link>
+              <MenuItem onClick={Logout}>
+              {currentUser ? "logout" : ""}
+                </MenuItem>
             </MenuList>
           </Menu>
         </div>

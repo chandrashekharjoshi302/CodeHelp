@@ -27,17 +27,21 @@ export default function Home() {
           </div>
         </div>
         <div className='flex px-2'>
-          <div className=' absolute top-[42%] md:top-[48%] md:left-[30%] w-[200px] h-[200px] text-black'>
+          <div className=' absolute border-l-4 hover:rounded-lg overflow-hidden border-blue-900 top-[42%] md:top-[48%] md:left-[30%] lg:left-[46%] w-[200px] h-[200px] text-black'>
              <div className='h-[70%]  overflow-hidden'>
                <img src='/book.jpg' width="200" height="90" className='hover:scale-125 duration-300' alt="books" /> 
              </div>
              <div className='bg-white h-[30%] text-center'>
              <p className='font-semibold text-lg text-gray-600'>Go to Book Store</p>
-             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300' id={styles.btn}>OPEN</button>
+             {currentUser?<Link href="/Book">
+             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300 ' id={styles.btn}>OPEN</button>
+             </Link>:<Link href="/Login">
+             <button className='border-2 border-gray-400 font-semibold px-[3px] py-[1px] rounded-md cursor-pointer hover:scale-105 duration-300 ' id={styles.btn}>OPEN</button>
+             </Link>}
              </div>
           </div>
 
-          <div className=' absolute top-[67%] md:top-[48%] left-[46%] md:left-[60%] lg:left-[50%] w-[200px] h-[200px] shadow-lg'>
+          <div className=' absolute border-l-4 hover:rounded-lg overflow-hidden border-blue-900 top-[67%] md:top-[48%] left-[46%] md:left-[60%] lg:left-[62%] w-[200px] h-[200px] shadow-lg'>
           <div className='h-[70%]  overflow-hidden'>
                <img src='/quiz.jpg' width="200" height="90" className='hover:scale-110 duration-300' alt="books" /> 
              </div>
