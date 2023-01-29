@@ -4,12 +4,14 @@ import React, { useState, useEffect } from 'react';
 function Test({questions}) {
 //   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [total, settotal] = useState(0)
   const [isCorrect, setIsCorrect] = useState(null);
 
 
   function handleClick(e) {
     if (e.target.innerHTML === questions[currentQuestion].answer) {
       setIsCorrect(true);
+      settotal(total+1)
       setCurrentQuestion(currentQuestion+1)
       setIsCorrect(null)
     } else {
@@ -24,7 +26,9 @@ function Test({questions}) {
 //   console.log(questions)
 
   return (
+
     <div style={{marginTop:"100px"}}>
+      <h1>Marks Obtained:- {total}/45</h1>
        Question: {currentQuestion+1}
       <h3>{questions[currentQuestion].question}</h3>
       
@@ -41,8 +45,9 @@ function Test({questions}) {
      {isCorrect === true && <p>Correct.</p>}
      {isCorrect === false && <p>Incorrect.</p>}
      <br />
-     <button disabled={currentQuestion===0} onClick={()=>setCurrentQuestion(currentQuestion-1)}>Previous</button>
-     <Button onClick={handleChange}>Next</Button>
+    
+     <button disabled={currentQuestion===44} onClick={handleChange}>Next</button>
+     
     </div>
   );
 }
