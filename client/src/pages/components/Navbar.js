@@ -23,9 +23,12 @@ import {
   RepeatIcon,
 } from "@chakra-ui/icons";
 import Link from "next/link";
+import {GoHome,GoInfo} from 'react-icons/go'
+
 import useAuth from "../useAuth";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
+
 
 const Navbar = () => {
   const currentUser = useAuth();
@@ -39,36 +42,37 @@ const Navbar = () => {
     }
   };
   return (
-    <div style={{marginTop:"0px"}} className="mt-0 border">
-    <div className="flex h-[60px] text-xl items-center px-2 justify-between font-sans font-medium  text-gray-300 w-full fixed mb-10" id={styles.mai}>
-      <div className=" px-0 md:px-5 items-center border border-red-600 ">
+    <div  className=" fixed w-full z-20 -mt-[60px] " id={styles.nav}>
+    <div className="flex h-[60px] text-xl items-center px-2 justify-between font-sans font-medium  text-gray-300 w-full  " id={styles.mai}>
+      <div className=" px-0 md:px-5 items-center relative  h-[90px] top-5">
         <Link href="/">
-        <Image src="/quizzy.png" width="110" height="20" className="w-[60px] md:w-[90px] cursor-pointer" alt="photo"></Image>
+        <Image src="/quizzy.png" width="110" height="20"  className="w-[60px] md:w-[90px] cursor-pointer" alt="photo"></Image>
         </Link>
       </div>
       <div className=" h-[35px] px-3 md:w-[35%] md:h-[40px] rounded-xl items-center bg-white flex md:px-3 justify-between">
+        <div className="w-[80%] md:w-[90%] h-full">
         <input
           placeholder="Search"
-          className=" md:h-[38px] outline-none text-gray-600 text-xs md:text-lg font-normal rounded-xl"
+          className=" md:h-[38px] w-[80%] md:w-[90%]  outline-none text-gray-600 text-xs md:text-lg font-normal rounded-xl"
         />
-        <BsSearch className="text-[13px] md:text-[17px] text-gray-600 cursor-pointer" />
+        </div>
+        <div className="border-l-2 h-full flex items-center px-2 overflow-hidden ">
+        <BsSearch className="text-[13px] md:text-[17px] text-gray-600 cursor-pointer hover:scale-105 duration-300" />
+        </div>
       </div>
       
       <div className="hidden md:block">
       <div className="flex md:text-sm lg:text-xl font-medium gap-6  h-full justify-center items-center md:px-6">
         <Link href="/">
-        <h1 className="cursor-pointer hover:scale-110 duration-200">Home</h1>
+        <h1 className="cursor-pointer hover:scale-110 duration-200 text-2xl"><GoHome/> </h1>
         </Link>
-        <h1 className="cursor-pointer hover:scale-110 duration-200">About Us</h1>
+        <h1 className="cursor-pointer hover:scale-110 duration-200 text-2xl"><GoInfo /></h1>
         <Link href="/login">
-        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md ">{currentUser?currentUser.displayName:"Signin"}</h1>
+        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md" id={styles.btn}>Signin</h1>
         </Link>
-        <Link href="/signup">
-        <Text className="cursor-pointer">
-            {currentUser?"":"Register"}
-        </Text>
-        </Link>
-        <Text style={{cursor:"pointer"}} onClick={Logout}>{currentUser?"Logout":""}</Text>
+        {/* <Link href="/signup">
+        <h1 className="cursor-pointer hover:scale-110 duration-200 border-2 px-2 py-1 rounded-md">Register</h1>
+        </Link> */}
       </div>
       </div>
 
@@ -94,14 +98,6 @@ const Navbar = () => {
             {currentUser?currentUser.displayName:"Signin"}
             </MenuItem>
             </Link>
-            <Link href="/signup">
-            <MenuItem >
-            {currentUser?"":"Register"}
-            </MenuItem>
-            </Link>
-            <MenuItem>
-            <Text style={{cursor:"pointer"}} onClick={Logout}>{currentUser?"Logout":""}</Text>
-            </MenuItem>
           </MenuList>
         </Menu>
       </div>
